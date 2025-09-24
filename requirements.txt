@@ -1,0 +1,5 @@
+ultralytics==8.2.103
+streamlit
+pillow
+opencv-python-headless
+torch
