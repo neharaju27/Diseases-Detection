@@ -15,7 +15,8 @@ def load_model(model_path):
 # Model paths (replace with your files)
 MODEL_PATHS = {
     "Groundnut": "best_1.pt",
-    "Chilli": "best.pt"
+    "Chilli": "best.pt",
+    "Maize": "best_2.pt"
 }
 
 # Class lists
@@ -28,7 +29,9 @@ CLASS_NAMES = {
     "Chilli": [
         'aphids','armyworm','caterpillar','fusarium_wilt','mites',
         'powdery_mildew','thirps','whitefly'
-    ]
+    ],
+    "Maize":['apids','armyworm','ash_weevil','bacterial_stalk_rot','charcoal_rot','ear_rot','grass_hopper','head_stum','leaf_blight','leaf_hoppers','pink_stem_borer','rajasthan_downy_mildew','rust','shoot_fly'
+            ]
 }
 
 # ----------------------
@@ -73,4 +76,5 @@ if uploaded_file:
             st.write("✅ No disease/pest detected!")
 
     # Cleanup
+
     os.remove(temp_file.name)
