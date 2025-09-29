@@ -40,7 +40,7 @@ CLASS_NAMES = {
 # ----------------------
 st.title("🌿 Crop Pest & Disease Detection")
 
-crop_choice = st.selectbox("Select Crop", ["Groundnut", "Chilli"])
+crop_choice = st.selectbox("Select Crop", ["Groundnut", "Chilli","Maize"])
 model = load_model(MODEL_PATHS[crop_choice])
 disease_classes = CLASS_NAMES[crop_choice]
 
@@ -77,5 +77,6 @@ if uploaded_file:
             st.write("✅ No disease/pest detected!")
 
     # Cleanup
+
 
     os.remove(temp_file.name)
