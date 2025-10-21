@@ -18,7 +18,8 @@ MODEL_PATHS = {
     "Chilli": "best.pt",
     "Maize": "best_2.pt",
     "Wheat":"best_14.pt",
-    "Sugarcane":"best_4.pt"
+    "Sugarcane":"best_4.pt",
+    "Paddy":"best_3.pt"
 }
 
 # Class lists
@@ -45,7 +46,11 @@ CLASS_NAMES = {
         'aphids','bacteria_blights','downey_mildew','dried_leaves',
         'mealybug','mosaic','red_rot','ring_spot','root_borer','rust',
         'smut','termites','top_borer','yellow_leaf_syndrome','yellow_spot'
-    ]        
+    ],
+    "Paddy":['Brown spot','False Smut','Leaf Smut','Rice blast',
+             'Stem Rot','Tungro','leaf_blight',
+             'leaf_folder','sheath_blight'
+            ]
 }
 
 # ----------------------
@@ -53,7 +58,7 @@ CLASS_NAMES = {
 # ----------------------
 st.title("🌿 Crop Pest & Disease Detection")
 
-crop_choice = st.selectbox("Select Crop", ["Groundnut","Wheat", "Chilli","Maize","Sugarcane"])
+crop_choice = st.selectbox("Select Crop", ["Groundnut","Wheat", "Chilli","Maize","Sugarcane","Paddy"])
 model = load_model(MODEL_PATHS[crop_choice])
 disease_classes = CLASS_NAMES[crop_choice]
 
@@ -93,6 +98,7 @@ if uploaded_file:
 
 
     os.remove(temp_file.name)
+
 
 
 
