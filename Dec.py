@@ -58,7 +58,7 @@ CLASS_NAMES = {
 # ----------------------
 st.title("🌿 Crop Pest & Disease Detection")
 
-crop_choice = st.selectbox("Select Crop", ["Groundnut","Wheat", "Chilli","Maize","Sugarcane","Paddy"])
+crop_choice = st.selectbox("Select Crop", ["Groundnut","Wheat","Maize","Sugarcane","Paddy"])
 model = load_model(MODEL_PATHS[crop_choice])
 disease_classes = CLASS_NAMES[crop_choice]
 
@@ -98,6 +98,7 @@ if uploaded_file:
 
 
     os.remove(temp_file.name)
+
 
 
 
