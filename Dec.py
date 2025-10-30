@@ -14,7 +14,7 @@ def load_model(model_path):
 
 # Model paths (replace with your files)
 MODEL_PATHS = {
-    "Groundnut": "best_1.pt",
+    "Groundnut": "best_9.pt",
     "Chilli": "best.pt",
     "Maize": "best_2.pt",
     "Wheat":"best_14.pt",
@@ -98,6 +98,7 @@ if uploaded_file:
 
 
     os.remove(temp_file.name)
+
 
 
 
