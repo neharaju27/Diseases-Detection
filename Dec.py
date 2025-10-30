@@ -25,7 +25,7 @@ MODEL_PATHS = {
 # Class lists
 CLASS_NAMES = {
     "Groundnut": [
-        'aphids','bacterial_wilt','black_fungus_groundnut','bud_rot','leaf_fungus',
+        'aphids','anthracnose','bacterial_wilt',
         'leaf_miner','red_hairy_caterpillar','root_rot','rosette','rust',
         'stunt_virus','tikka','tobacco_caterpillar','white_grub'
     ],
@@ -98,6 +98,7 @@ if uploaded_file:
 
 
     os.remove(temp_file.name)
+
 
 
 
