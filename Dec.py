@@ -19,7 +19,8 @@ MODEL_PATHS = {
     "Maize": "best_2.pt",
     "Wheat":"best_14.pt",
     "Sugarcane":"best_4.pt",
-    "Paddy":"best_3.pt"
+    "Paddy":"best_3.pt",
+    "Mango":"best_5.pt"
 }
 
 # Class lists
@@ -98,6 +99,7 @@ if uploaded_file:
 
 
     os.remove(temp_file.name)
+
 
 
 
