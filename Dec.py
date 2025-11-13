@@ -51,7 +51,12 @@ CLASS_NAMES = {
     "Paddy":['Brown spot','False Smut','Leaf Smut','Rice blast',
              'Stem Rot','Tungro','leaf_blight',
              'leaf_folder','sheath_blight'
+            ],
+    "Mango":['anthracnose','black_rot','fruit_fly','gall_midge',
+             'malformation','mango_hopper','mango_mealybug','powdery_mildew',
+             'red_rust','sooty_mould','weevil'	
             ]
+
 }
 
 # ----------------------
@@ -59,7 +64,7 @@ CLASS_NAMES = {
 # ----------------------
 st.title("🌿 Crop Pest & Disease Detection")
 
-crop_choice = st.selectbox("Select Crop", ["Groundnut","Wheat","Maize","Sugarcane","Paddy","Chilli"])
+crop_choice = st.selectbox("Select Crop", ["Groundnut","Wheat","Maize","Sugarcane","Paddy","Mango","Chilli"])
 model = load_model(MODEL_PATHS[crop_choice])
 disease_classes = CLASS_NAMES[crop_choice]
 
@@ -99,6 +104,7 @@ if uploaded_file:
 
 
     os.remove(temp_file.name)
+
 
 
 
