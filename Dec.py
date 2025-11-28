@@ -39,9 +39,9 @@ CLASS_NAMES = {
         'grass_hopper','head_stum','leaf_blight','leaf_hoppers','pink_stem_borer','rajasthan_downy_mildew','rust','shoot_fly'
     ],
     "Wheat":[
-        'Aphid', 'Black Rust', 'Blast', 'Brown Rust', 'Common Root Rot',
+        'Aphid', 'Black Rust', 'Blast', 'Rust', 'Common Root Rot',
         'Fusarium Head', 'Leaf Blight', 'Mildew', 'Mite', 'Septoria',
-        'Smut', 'Stem_fly', 'Tan spot', 'yellow_rust'
+        'Smut', 'Stem_fly', 'Tan spot'
     ],
     "Sugarcane":[
         'aphids','bacteria_blights','downey_mildew','dried_leaves',
@@ -104,6 +104,7 @@ if uploaded_file:
 
 
     os.remove(temp_file.name)
+
 
 
 
